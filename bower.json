@@ -1,6 +1,26 @@
 {
   "name": "metsuri",
-  "dependencies": {
+  "version":"0.0.1",
+  "homepage": "https://github.com/artemyarulin/metsuri",
+  "main": "dist/metsuri.js",
+  "authors": [
+    "Artem Yarulin <Artem.Yarulin@fessguid.com>"
+  ],
+  "description": "JavaScript logger which works not with string, but with objects. It makes super easy and effective to filter and find information latter on",
+  "keywords": [
+    "logger",
+    "Object oriented logger"
+  ],
+  "ignore": [
+    "README.md",
+    "LICENSE",
+    "bower.json",
+    "package.json",
+    "gulpfile.js",
+    "test/**/*",
+  ],
+  "license": "MIT",
+  "devDependencies": {
     "chai": "~1.10.0",
     "mocha": "~2.1.0"
   }
