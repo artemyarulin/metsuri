@@ -57,5 +57,3 @@ Put in a elasticsearch manually or configure the realtime processing with logsta
 # Caveat
 - You should carefully select the keys for your log structures: if you decided to use `userId' - stick with it everywhere in your application or try to utilize it using operation
 - Don't create too many operation keys - it makes your log very verbose. The point of operation is to group log entries together and save you some time from typing
-- Last but not least - the project is not yet implemented ![doh](http://rafinhaea7arte.files.wordpress.com/2010/04/homer-doh.gif)
-
