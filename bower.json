@@ -1,6 +1,6 @@
 {
   "name": "metsuri",
-  "version":"0.0.1",
+  "version":"0.0.2",
   "homepage": "https://github.com/artemyarulin/metsuri",
   "main": "dist/metsuri.js",
   "authors": [
@@ -17,7 +17,8 @@
     "bower.json",
     "package.json",
     "gulpfile.js",
-    "test/**/*"
+    "test/",
+    "src/"
   ],
   "license": "MIT",
   "devDependencies": {

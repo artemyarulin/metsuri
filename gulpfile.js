@@ -63,7 +63,8 @@ gulp.task('test', ['build'], function () {
 })
 
 gulp.task('release',['test'],function(){
-	return gulp.src(['build/metsuri.js','src/metsuri.externs.js'])
+	return gulp.src(['build/metsuri.js',
+					 'src/metsuri.extern.js'])
 		.pipe(gulp.dest('dist'))
 })
 
