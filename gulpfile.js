@@ -5,7 +5,8 @@ var gulp = require('gulp'),
     mochaPhantomJS = require('gulp-mocha-phantomjs')
 
 var js_custom = [
-	'src/metsuri.js'
+	'src/metsuri.js',
+	'src/transports.js'
 ]
 
 var processExitOnError = true
@@ -20,7 +21,8 @@ gulp.task('clean', function (cb) { del(['build'], cb) })
 gulp.task('build', ['clean'], function () {
 	var jsonRules = require('./.jshintrc.json')
 	jsonRules.lookup = false;
-
+	
+    jsonRules.predef = jsonRules.predef.concat('Metsuri','setTimeout','XMLHttpRequest')
     var bSrc =  gulp.src(js_custom)
         .pipe(plugins.plumber({
             errorHandler: onError
