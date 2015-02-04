@@ -33,4 +33,19 @@ describe('metsuri', () => {
     })
     log.debug('Test', 'operation')
   })
+
+  it('should work with ElasticsearchTransport',(done) => {
+    let log = new Metsuri('trace',[new Metsuri.Transports.ElasticsearchTransport('http://192.168.59.103:9200','metsuri','logs', (ctx) => {
+      assert.equal(ctx.sender,'App')
+      assert.equal(ctx.action,'started')
+      assert.equal(ctx.test,true)
+      assert.equal(ctx.acc,22)
+      assert.equal(ctx.server,'db-3')
+      done()
+      return ctx
+    })])
+
+    log.op({test:true})
+    log.warn('App','started',{acc:22,server:'db-3'})
+  })
 })

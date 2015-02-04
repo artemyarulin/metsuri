@@ -20,6 +20,9 @@ Metsuri.Transports = (function () { //jshint ignore:line
             let msg = _sendQueue.shift(),
                 req = new XMLHttpRequest()
 
+            if (typeof msg !== 'string')
+                msg = JSON.stringify(msg)
+            
             req.open('POST', _url, true)
             req.setRequestHeader('Content-Type', 'text/plain')
             req.onreadystatechange = () => {
